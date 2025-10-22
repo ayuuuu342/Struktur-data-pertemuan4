@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cstdlib>
+#include "singlylist.h"
+#include "singlylist.cpp"
+
+using namespace std;
+
+int main() {
+    List L;
+    address P; // cukup satu pointer untuk digunakan berulang kali
+
+    CreateList(L);
+
+    cout << "mengisi list menggunakan insertlast..." << endl;
+    // mengisi list sesuai urutan  
+    P = Alokasi(9);
+    InsertLast(L, P);
+
+    P = Alokasi(12);
+    InsertLast(L, P);
+
+    P = Alokasi(8);
+    InsertLast(L, P);
+
+    P = Alokasi(0);
+    InsertLast(L, P);
+
+    P = Alokasi (2);
+    InsertLast(L, P);
+
+    cout << "isi list sekarang adalah: ";
+    printInfo(L);
+
+    system ("pause");
+    return 0;
+}
+
+
+
